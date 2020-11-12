@@ -16,7 +16,7 @@ Kenzie assignment: Lists!
 
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Jennifer Schneider"
 
 # A. match_ends
 # Given a list of strings, return the count of the number of
@@ -26,8 +26,19 @@ __author__ = "???"
 
 
 def match_ends(words):
-    # your code here
-    return
+    #assigning a value of 0 to the count for words
+    
+    amt = 0
+    #indicating if any word in words is more than or equal to 2 | the last 2 indexes(0, -1) are the same 
+    if match_ends(word) > 1 and word[0] == word[-1]
+      #add 1 to amt
+    amt += 1
+
+      return amt
+
+
+
+
 
 
 # B. front_x
@@ -42,8 +53,20 @@ def match_ends(words):
 
 
 def front_x(words):
-    # your code here
-    return
+#assigning a value for words starting with x and another for words starting with any other letter
+    xlist = []
+    avglist = []
+
+    for word in words:
+        #if any word ends with the letter x
+        if word.startswith('x'):
+        # add it to xlist 
+            xlist.append(word)
+        else:
+            #every other letter goes in avglist
+            avglist.append(word)
+    
+    return sorted(xlist) + sorted(avglist)
 
 
 # C. sort_last
@@ -56,8 +79,10 @@ def front_x(words):
 
 
 def sort_last(tuples):
-    # your code here
-    return
+    #defining a variable to hold the current tuples to get the value at index -1
+    def last(tuples): return tuples[-1]
+    #sorts the lists in order with the key from above
+    return sorted(tuples, key=last)
 
 
 # D. remove_adjacent
@@ -70,8 +95,19 @@ def sort_last(tuples):
 
 
 def remove_adjacent(nums):
-    # your code here
-    return
+    #assigning nums to list1
+    list1 = nums
+    #for index of i in nums
+    for i in nums:
+        #for index of n in list1
+        for n in list1:
+            #if I is equal to n
+            if i == n:
+                #create a second list(list2) and add i to it
+                list2 = i
+                #print list 2
+                print(list2)
+        
 
 
 # E. zip_merge
@@ -85,9 +121,14 @@ def remove_adjacent(nums):
 
 
 def zip_merge(list1, list2):
-    # your code here
-    return
-
+    #created an empty list
+    temp = []
+    #take i from zip_merge
+for i in zip_merge(list1, list2):
+    #for n in i
+    for n in i:
+        #append n into the list temp
+        temp.append(n)
 
 # F. empty_filter
 # Given a single list containing strings, empty strings, and
@@ -99,8 +140,13 @@ def zip_merge(list1, list2):
 
 
 def empty_filter(list1):
-    # your code here
-    return
+    list2 = filter(None, list1)
+    list2 = filter(bool, list1)
+    list2 = (len, list1)
+    #if x is not equal to an empty string
+    [x for x in list1 if x != '']
+    
+        return list2(x)
 
 
 # G. linear_merge
@@ -115,5 +161,15 @@ def empty_filter(list1):
 
 
 def linear_merge(list1, list2):
-    # your code here
-    return
+result = []
+while len(list1) and len(list2):
+    if list1(0) < list2(0):
+        result.append(list1.pop(0))
+    else:
+        result.append(list2.pop(0))
+
+        result.extend(list1)
+        result.extend(list2)
+        
+    return result
+    #made this comment so i could create a pull request
